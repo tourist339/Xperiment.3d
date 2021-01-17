@@ -1,0 +1,3 @@
+function loadDiagram(name){
+
+}

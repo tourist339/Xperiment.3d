@@ -1,0 +1,32 @@
+@import "variables";
+html{
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+*{
+  box-sizing: border-box;
+}
+.rowflex{
+  display: flex;
+  flex-direction: row;
+}
+.link-button{
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+  color: black;
+  font-size: 15px;
+  background-color: rgba(1,1,1,0.3);
+  margin: 10px 0;
+}
+
+.active-link-button{
+  background-color: rgba(1,1,1,0.8);
+  color: white;
+
+}

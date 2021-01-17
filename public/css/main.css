@@ -1,0 +1,120 @@
+.text-body {
+  font-family: "Montserrat";
+  font-size: 21.6px;
+}
+
+.text-small-body {
+  font-family: "Montserrat";
+  font-size: 19.6px;
+}
+
+.text-icon {
+  font-family: "Montserrat";
+  font-size: 16.28px;
+}
+
+.text-small-icon {
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+.text-largeheading {
+  font-family: "Ubuntu";
+  font-size: 42px;
+}
+
+.text-midheading {
+  font-family: "Alegreya";
+  font-size: 28.8px;
+}
+
+.font-body {
+  font-family: "Montserrat" !important;
+}
+
+.font-largeheading {
+  font-family: "Ubuntu" !important;
+}
+
+.font-midheading {
+  font-family: "Alegreya" !important;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .text-largeheading {
+    font-size: 37px;
+  }
+
+  .text-midheading {
+    font-size: 25.8px;
+  }
+
+  .text-body {
+    font-size: 19.6px;
+  }
+
+  .text-icon {
+    font-size: 14.28px;
+  }
+
+  .text-small-icon {
+    font-size: 12.28px;
+  }
+}
+@media (max-width: 480px) {
+  .text-body {
+    font-size: 17.6px;
+  }
+
+  .text-largeheading {
+    font-size: 32px;
+  }
+
+  .text-midheading {
+    font-size: 21.8px;
+  }
+
+  .text-icon {
+    font-size: 13.28px;
+  }
+
+  .text-small-icon {
+    font-size: 11.78px;
+  }
+}
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rowflex {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-button {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+  color: black;
+  font-size: 15px;
+  background-color: rgba(1, 1, 1, 0.3);
+  margin: 10px 0;
+}
+
+.active-link-button {
+  background-color: rgba(1, 1, 1, 0.8);
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

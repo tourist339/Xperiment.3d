@@ -1,0 +1,86 @@
+.main-body {
+  max-width: 100%;
+  height: 100%;
+}
+
+#topic-index {
+  min-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+#topic-index h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+#topic-index .link-button {
+  background-color: lightgray;
+  margin: 20px 0;
+  text-decoration: none;
+}
+#topic-index .active-link-button {
+  background-color: rgba(1, 1, 1, 0.8);
+  color: white;
+}
+
+.main-content {
+  padding: 20px;
+  width: 100%;
+  background-color: #4CAF50;
+  height: 100%;
+  position: relative;
+}
+.main-content > div {
+  border: 5px solid darkgray;
+}
+
+.theory {
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  word-spacing: 0.3em;
+  letter-spacing: 0.07em;
+  overflow-y: scroll;
+}
+
+.diagram {
+  flex: 1;
+  position: relative;
+}
+.diagram .full-screen {
+  position: absolute;
+  background-color: black;
+  color: whitesmoke;
+  outline: none;
+  bottom: 0;
+  right: 0;
+}
+.diagram .full-screen:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.fig-btns {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.fig-btns button {
+  font-size: 16px;
+  margin: 0 4px;
+  outline: none;
+  background-color: rgba(1, 1, 1, 0.3);
+}
+.fig-btns button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: whitesmoke;
+}
+.fig-btns .active-fig-button {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/*# sourceMappingURL=page.css.map */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+$vdata=$this->view_data;
+
+?>
+<html>
+<head>
+
+    <title><?php echo $vdata["title"]?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;350;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <?php
+
+    //    Dynamically loaded scripts from viewdata
+    if(isset($vdata["scripts"])) {
+        foreach ($vdata["scripts"] as $script) {
+            if(is_array($script)){
+                foreach ($script as $sc){
+                    if(file_exists("js" .DIRECTORY_SEPARATOR. $sc )) {
+                        echo "<script src='/js" . DIRECTORY_SEPARATOR . $sc . "'></script>";
+                    }else{
+                        echo "<script src='".$sc."'></script>";
+                    }
+                }
+            }else{
+                if(file_exists("js" .DIRECTORY_SEPARATOR. $script )) {
+                    echo "<script src='/js" . DIRECTORY_SEPARATOR . $script . "'></script>";
+                }else{
+                    echo "<script src='".$script."'></script>";
+                }}
+        }
+    }
+
+    //    Dynamically loaded stylesheets from viewdata
+    if(isset($vdata["stylesheets"])) {
+        foreach ($vdata["stylesheets"] as $stylesheet) {
+            if(is_array($stylesheet)) {
+                foreach ($stylesheet as $st) {
+                    if (file_exists("css" . DIRECTORY_SEPARATOR . $st)) {
+                        echo "<link href='/css" . DIRECTORY_SEPARATOR . $st . "' rel='stylesheet'>";
+                    } else {
+                        echo "<link href='" . $st . "' rel='stylesheet'>";
+                    }
+                }
+            }else{
+                if (file_exists("css" . DIRECTORY_SEPARATOR . $stylesheet)) {
+                    echo "<link href='/css" . DIRECTORY_SEPARATOR . $stylesheet . "' rel='stylesheet'>";
+                } else {
+                    echo "<link href='" . $stylesheet . "' rel='stylesheet'>";
+
+                }
+            }
+
+        }
+    }
+
+
+    ?>
+
+
+</head>
+<body>
+
+
+<?php
+if(isset($vdata["navbar"])){
+    $navpath=TEMPLATE."navbars".DIRECTORY_SEPARATOR;
+    if(file_exists($navpath.$vdata["navbar"])){
+        include $navpath.$vdata["navbar"];
+    }else{
+        include $navpath.'navbar.html';
+    }
+}
+
+?>
+
+
+

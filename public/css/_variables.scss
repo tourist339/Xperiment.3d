@@ -1,0 +1,193 @@
+@import "include-media";
+
+$headerColor:black;
+$headerText:white;
+
+$greenblue:#5297BF;
+$seagreen:#358597;
+
+$breakpoints:(phone:480px,tablet:768px,laptop:1024px,desktop:2000px);
+
+$fontHeading:"Ubuntu";
+$fontMidHeading:"Alegreya";
+$fontBody:"Montserrat";
+
+//laptop font sizes
+$fontsize_icon:16.28px;
+$fontsize_small_body:19.6px;
+
+$fontsize_body:21.6px;
+$fontsize_midheading:28.8px;
+$fontsize_largeheading:42px;
+
+//tablet font sizes
+$fontsize_tablet_largeheading:$fontsize_largeheading - 5px;
+$fontsize_tablet_midheading:$fontsize_midheading - 3px;
+
+$fontsize_tablet_body:$fontsize_body - 2px;
+$fontsize_tablet_small_body:$fontsize_small_body - 2px;
+
+$fontsize_tablet_icon:$fontsize_icon - 2px;
+
+//mobile font sizes
+$fontsize_mobile_largeheading:$fontsize_largeheading - 10px;
+$fontsize_mobile_midheading:$fontsize_midheading - 7px;
+$fontsize_mobile_body:$fontsize_body - 4px;
+$fontsize_mobile_icon:$fontsize_icon - 3px;
+
+
+
+
+$opaque_bg:rgba(1,1,1,0);
+@mixin largeHeading($fontSize,$src){
+
+}
+
+@mixin noArrowsInput{
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+
+@mixin fontAwesomeBtn($bgColor:rgba(1,1,1,0),$color:black,$fontSize:$fontsize_icon){
+
+  background-color: $bgColor;
+  color:$color;
+  outline: none;
+  font-size: $fontSize;
+  border:0;
+  padding: 0;
+  transition: background-color 4s ease-in;
+  i{
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+  }
+  &:hover{
+    i {
+      cursor: pointer;
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+@mixin basicBtn($bgColor:orangered,$color:white,$hoverbackground:whitesmoke){
+
+  background-color: $bgColor;
+  padding:0.4em;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 5px;
+
+  &:hover{
+    background-color: $hoverbackground;
+    color: $bgColor;
+    border-color: $bgColor;
+    cursor: pointer;
+  }
+}
+
+
+//common texts families and font sizes
+.text-body{
+  font-family: $fontBody;
+  font-size: $fontsize_body ;
+}
+.text-small-body{
+  font-family: $fontBody;
+  font-size: $fontsize_small_body ;
+}
+
+.text-icon{
+  font-family: $fontBody;
+  font-size: $fontsize_icon ;
+}
+
+.text-small-icon{
+  font-family: $fontBody;
+  font-size: 14px ;
+}
+
+.text-largeheading{
+  font-family: $fontHeading;
+  font-size: $fontsize_largeheading;
+}
+
+
+.text-midheading{
+  font-family: $fontMidHeading;
+  font-size: $fontsize_midheading;
+}
+
+.font-body{
+  font-family: $fontBody !important;
+
+}
+.font-largeheading{
+  font-family: $fontHeading !important;
+
+}
+.font-midheading{
+  font-family: $fontMidHeading !important;
+
+}
+
+//end
+
+
+// media query for tablet devices
+@include media(">phone","<=tablet"){
+  .text-largeheading{
+    font-size: $fontsize_tablet_largeheading;
+  }
+
+  .text-midheading{
+    font-size: $fontsize_tablet_midheading;
+  }
+  .text-body{
+    font-size: $fontsize_tablet_body;
+  }
+
+  .text-icon{
+    font-size: $fontsize_tablet_icon;
+  }
+  .text-small-icon{
+    font-size: $fontsize_tablet_icon - 2px;
+  }
+
+}
+//end of media query for tablets
+
+
+
+// media query for mobile devices
+@include media("<=phone"){
+  .text-body{
+    font-size: $fontsize_mobile_body;
+  }
+
+  .text-largeheading{
+    font-size: $fontsize_mobile_largeheading;
+  }
+
+  .text-midheading{
+    font-size: $fontsize_mobile_midheading;
+  }
+
+  .text-icon{
+    font-size: $fontsize_mobile_icon;
+  }
+  .text-small-icon{
+    font-size: $fontsize_mobile_icon - 1.5px;
+  }
+}
+//end of media query for mobiles

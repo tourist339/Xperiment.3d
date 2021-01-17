@@ -1,0 +1,82 @@
+<?php
+
+$topic=$this->view_data["data"];
+$url=$this->view_data["url"];
+$subtopic_code=$this->view_data["active_subtopic"];
+$active_subtopic=[];
+foreach ($topic["subtopics"] as $subtopic){
+    if ($subtopic["code"]==$subtopic_code){
+        $active_subtopic=$subtopic;
+    }
+}
+
+?>
+<body>
+
+<div class="main-body rowflex">
+    <div id="topic-index">
+        <h1 class="text-midheading"><?php echo $topic["name"] ?></h1>
+        <div id="subtopics">
+            <?php foreach ($topic["subtopics"] as $subtopic):?>
+                <?php if($subtopic["code"]==$subtopic_code): ?>
+                    <a class="active-link-button link-button" href="<?php echo $url.$subtopic["code"];?>"><?php echo $subtopic["name"];?></a>
+                <?php else:?>
+                    <a class="link-button" href="<?php echo $url.$subtopic["code"];?>"><?php echo $subtopic["name"]; ?></a>
+                <?php endif;?>
+            <?php endforeach;?>
+
+
+        </div>
+    </div>
+    <div class="main-content rowflex">
+        <div class="theory">
+            <?php foreach ($active_subtopic["theory"] as $theory): ?>
+            <div class="theory-data " model="<?php echo $theory["model"] ?>"><p class="text-icon"><?php echo $theory["content"] ?></p></div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="diagram">
+            <?php if (count($active_subtopic["theory"]) >1) : ?>
+            <div class="fig-btns">
+            <?php for($i=0;$i<count($active_subtopic["theory"]);$i++): ?>
+                <button class="fig-change-btn" fig="<?php echo $i ?>">Fig 1.<?php echo $i+1; ?></button>
+            <?php endfor; ?>
+            </div>
+            <?php endif; ?>
+
+        </div>
+
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".fig-change-btn[fig='0']").addClass("active-fig-button");
+        var viewer= new Viewer(document.getElementsByClassName("diagram")[0]);
+        var models={};
+        let i=0;
+        $(".theory-data").each(function () {
+            models[i]=viewer.getModel("/models/"+$(this).attr("model"));
+            i++;
+
+        });
+        models[0].then((object)=>{
+            viewer.setContent(object);
+        })
+
+        $(".fig-change-btn").on("click",function () {
+            $(".fig-change-btn").each(function () {
+                $(this).removeClass("active-fig-button");
+            })
+            $(this).addClass("active-fig-button");
+
+            models[parseInt($(this).attr("fig"))].then((object)=>{
+                viewer.setContent(object);
+            })
+        })
+
+
+
+
+    });
+</script>

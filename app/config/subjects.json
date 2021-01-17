@@ -1,0 +1,97 @@
+
+[
+  {"name": "physics",
+    "sub_code": 1,
+    "topics": [
+      {
+        "name": "Kinematics",
+        "code": 1,
+        "default_subtopic": "1",
+        "subtopics": [
+          {
+            "code": 1,
+            "name": "Projectile",
+            "theory": [
+              ""
+            ],
+            "models": [
+              "m1.glb","m2.glb"
+            ]
+          },
+          {
+            "code": 2,
+            "name": "Kinematics_subtopic2"
+          },
+          {
+            "code": 3,
+            "name": "Kinematics_subtopic3"
+          }
+        ]
+      }
+    ,
+      {
+        "name": "Magnetism",
+        "code": 1,
+        "default_subtopic": 1,
+        "subtopics": [
+          {
+            "code": 1,
+            "name": "Motion in a Magnetic field",
+            "theory": [
+              {
+                "content":
+                "In the case of motion of a charge in a magnetic field, the magnetic force is perpendicular to the velocity of the particle. So no work is done and no change in the magnitude of the velocity is produced (though the direction of momentum may be changed).We shall consider motion of a charged particle in a uniform magnetic field. First consider the case of v perpendicular to B. The perpendicular force, q v × B, acts as a centripetal force and produces a circular motion perpendicular to the magnetic field. The particle will describe a circle if v and B are perpendicular to each other.If velocity has a component along B, this component remains unchanged as the motion along the magnetic field will not be affected by the magnetic field. The motion in a plane perpendicular to B is as before a circular one, thereby producing a helical motion "
+              ,"model": "physics/Magnetism/Circular_motion.glb"},
+              {
+                "content":
+                "Theory2 goes here"
+              ,"model": "physics/Magnetism/circ_motion_animation.glb"}
+            ]
+          },
+          {
+            "code": 2,
+            "name": "Torque generated due to magnetic force on a current loop",
+            "theory": [
+              {"content":
+              "A rectangular loop carrying a steady current I and placed in a uniform magnetic field experiences a torque. It does not experience a net force. This behaviour is analogous to that of electric dipole in a uniform electric field.The field exerts no force on the two arms AD and BC of the loop. It is perpendicular to the arm AB of the loop and exerts a force F1 on it which is directed into the plane of the loop.Similarly it exerts a force F2 on the arm CD and F2 is directed out of the plane. Thus, the net force on the loop is zero. There is a torque on the loop due to the pair of forces F1 and F2. The 3D structures here shows a view of the loop from the AD end. It shows that the torque on the loop tends to rotate it anti-clockwise."
+              ,"model": "physics/Magnetism/torque_mf.glb"}
+            ,{
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate lorem enim. In justo purus, aliquet vitae tincidunt ac, consectetur quis erat. Pellentesque vel ex vitae purus convallis tincidunt in non ex. Aenean tristique porta odio a mollis. Etiam tortor ligula, volutpat a mauris ut, molestie vulputate nulla. Sed felis nulla, pretium quis nunc nec, finibus bibendum purus. Praesent pellentesque magna neque, at laoreet ex pretium eget. Fusce vitae diam justo. Maecenas vitae libero velit. Sed a vestibulum magna. Proin scelerisque lorem diam.\n\nPellentesque commodo bibendum neque. Vivamus tincidunt at est non maximus. Ut laoreet dui ac arcu feugiat aliquet non sit amet sem. Etiam viverra purus ut felis interdum, id imperdiet mi viverra. Nulla id eleifend felis, a vestibulum magna. Nunc tempus consectetur ultrices. Donec ut lectus non nisi gravida scelerisque eu id elit. Sed ipsum nisl, pellentesque in ipsum quis, sodales lacinia enim. Curabitur eu tristique sem. Mauris volutpat, tortor non ornare eleifend, magna lacus imperdiet nibh, nec vulputate dui libero eu risus. Aenean volutpat vestibulum rutrum.\n\nDuis ullamcorper posuere elit, nec lobortis velit ultrices non. Praesent nec metus quis eros porta tempor ut tincidunt nisl. Nulla egestas varius mauris, in vulputate leo gravida sed. Praesent a mattis arcu, non tincidunt libero. Duis consequat tortor quis nulla eleifend blandit. Duis non eros vitae ligula condimentum sollicitudin. Aliquam erat volutpat. Donec in purus iaculis, consectetur mauris vitae, semper massa. Etiam convallis est vitae lorem dignissim dignissim. Nulla nec orci libero. Aenean rhoncus orci vel nunc tincidunt, ut condimentum purus eleifend. Ut id leo rutrum, sollicitudin dolor vitae, ullamcorper eros. Suspendisse quis cursus justo, quis tincidunt libero.\n\nIn imperdiet ultrices pharetra. Duis eu tortor leo. Phasellus posuere quam a eros dapibus, sed consectetur nulla maximus. Nunc massa arcu, dignissim ac tincidunt quis, placerat luctus odio. Vivamus eu tellus at lorem varius suscipit. Etiam viverra placerat libero nec placerat. Sed vehicula, dui quis rhoncus euismod, urna ex facilisis mi, eget rhoncus sem nisl ut sem. Fusce bibendum massa quam. Vivamus risus arcu, tempor at aliquam porttitor, semper a tortor. Nulla rhoncus quis nisl non dictum. Proin maximus, ipsum rutrum suscipit gravida, ante diam condimentum risus, sit amet accumsan sapien est elementum quam. Maecenas tempor consectetur massa, ac semper nisl gravida et. Proin sit amet nibh egestas, egestas sem nec, lacinia lorem. Suspendisse bibendum id tortor id lacinia.",
+                "model": "physics/Magnetism/torque_angle.glb"
+              }
+            ,{
+                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate lorem enim. In justo purus, aliquet vitae tincidunt ac, consectetur quis erat. Pellentesque vel ex vitae purus convallis tincidunt in non ex. Aenean tristique porta odio a mollis. Etiam tortor ligula, volutpat a mauris ut, molestie vulputate nulla. Sed felis nulla, pretium quis nunc nec, finibus bibendum purus. Praesent pellentesque magna neque, at laoreet ex pretium eget. Fusce vitae diam justo. Maecenas vitae libero velit. Sed a vestibulum magna. Proin scelerisque lorem diam.\n\nPellentesque commodo bibendum neque. Vivamus tincidunt at est non maximus. Ut laoreet dui ac arcu feugiat aliquet non sit amet sem. Etiam viverra purus ut felis interdum, id imperdiet mi viverra. Nulla id eleifend felis, a vestibulum magna. Nunc tempus consectetur ultrices. Donec ut lectus non nisi gravida scelerisque eu id elit. Sed ipsum nisl, pellentesque in ipsum quis, sodales lacinia enim. Curabitur eu tristique sem. Mauris volutpat, tortor non ornare eleifend, magna lacus imperdiet nibh, nec vulputate dui libero eu risus. Aenean volutpat vestibulum rutrum.\n\nDuis ullamcorper posuere elit, nec lobortis velit ultrices non. Praesent nec metus quis eros porta tempor ut tincidunt nisl. Nulla egestas varius mauris, in vulputate leo gravida sed. Praesent a mattis arcu, non tincidunt libero. Duis consequat tortor quis nulla eleifend blandit. Duis non eros vitae ligula condimentum sollicitudin. Aliquam erat volutpat. Donec in purus iaculis, consectetur mauris vitae, semper massa. Etiam convallis est vitae lorem dignissim dignissim. Nulla nec orci libero. Aenean rhoncus orci vel nunc tincidunt, ut condimentum purus eleifend. Ut id leo rutrum, sollicitudin dolor vitae, ullamcorper eros. Suspendisse quis cursus justo, quis tincidunt libero.\n\nIn imperdiet ultrices pharetra. Duis eu tortor leo. Phasellus posuere quam a eros dapibus, sed consectetur nulla maximus. Nunc massa arcu, dignissim ac tincidunt quis, placerat luctus odio. Vivamus eu tellus at lorem varius suscipit. Etiam viverra placerat libero nec placerat. Sed vehicula, dui quis rhoncus euismod, urna ex facilisis mi, eget rhoncus sem nisl ut sem. Fusce bibendum massa quam. Vivamus risus arcu, tempor at aliquam porttitor, semper a tortor. Nulla rhoncus quis nisl non dictum. Proin maximus, ipsum rutrum suscipit gravida, ante diam condimentum risus, sit amet accumsan sapien est elementum quam. Maecenas tempor consectetur massa, ac semper nisl gravida et. Proin sit amet nibh egestas, egestas sem nec, lacinia lorem. Suspendisse bibendum id tortor id lacinia.",
+                "model": "physics/Magnetism/torque_rotating.glb"
+              }
+            ]
+          },
+          {
+            "code": 3,
+            "name": "Force between two parallel Currents",
+            "theory": [
+              {"content":
+              "There exists a magnetic field due to a conductor carrying a current which obeys the Biot-Savart law. An external magnetic field will exert a force on a current-carrying conductor. This follows from the Lorentz force formula. The 3D structure shows two long parallel conductors a and b separated by a distance d and carrying (parallel) currents Ia and Ib, respectively. The conductor ‘a’ produces, the same magnetic field Ba at all points along the conductor ‘b’. The right-hand rule tells us that the direction of this field is downwards "
+              ,"model": "physics/Magnetism/parallel_current.glb"}
+            ]
+          },
+          {
+            "code": 4,
+            "name": "Magnetic Field Induced by a ring",
+            "theory": [
+              {"content":
+              "In this section, we shall see the magnetic field due to a circular coil along its axis. The evaluation entails summing up the effect of infinitesimal current elements (I dl) mentioned in the previous section.We assume that the current i is steady and that the evaluation is carried out in free space. The direction of dB is perpendicular to the plane formed by dl and r. It has an x-component dBx and a component perpendicular to x-axis, dB⊥. When the components perpendicular to the x-axis are summed over, they cancel out and we obtain a null result. For example, the dB⊥ component due to dl is cancelled by the contribution due to the diametrically opposite dl element. Thus, only the x-component survives. The net contribution along x-direction can be obtained by integrating dBx = dB cos θ over the loop."
+              ,"model": "physics/Magnetism/axial_mf.glb"}
+            ]
+
+          }
+        ]
+      }
+
+    ]
+  }
+
+
+
+]
+
+

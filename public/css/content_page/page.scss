@@ -1,0 +1,92 @@
+
+
+.main-body {
+  max-width: 100%;
+  height: 100%;
+}
+
+#topic-index {
+  min-width: 300px;
+  padding: 10px;
+  background-color: white;
+  h1{
+    text-align: center;
+    margin: 20px 0;
+  }
+  .link-button{
+    background-color: lightgray;
+    margin: 20px 0;
+    text-decoration: none;
+
+  }
+
+  .active-link-button{
+    background-color: rgba(1,1,1,0.8);
+    color: white;
+
+  }
+}
+.main-content{
+    padding: 20px;
+    width: 100%;
+    background-color:#4CAF50;
+    height: 100%;
+    position: relative;
+    &>div{
+      border: 5px solid darkgray;
+    }
+}
+
+.theory{
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  word-spacing: 0.3em;
+  letter-spacing: 0.07em;
+  overflow-y: scroll;
+  }
+
+.diagram{
+  flex: 1;
+  position: relative;
+  .full-screen{
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
+    outline: none;
+    &:hover{
+      cursor: pointer;
+      background-color: whitesmoke;
+      color: black;
+    }
+    bottom: 0;
+    right: 0;
+  }
+  }
+
+.fig-btns{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  button{
+    font-size: 16px;
+
+    margin: 0 4px;
+    outline: none;
+    background-color: rgba(1,1,1,0.3);
+    &:hover{
+      cursor: pointer;
+      background-color: black;
+      color: whitesmoke;
+    }
+  }
+  .active-fig-button{
+    background-color: black;
+    color: whitesmoke;
+
+  }
+}
+
+

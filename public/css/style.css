@@ -1,0 +1,62 @@
+/* Homepage/index */
+
+.topnav {
+  background-color: #08d9d6;
+  overflow: hidden;
+}
+
+.container_btn_subjects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  ;
+}
+
+.quoted_message {
+
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Index */
+.padding {
+  padding-bottom: 2rem;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 15px #000;
+}
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+
+/* Physics */
+
+.btn-primary {
+  background-color: #08d9d6;
+  border: 1px solid #08d9d6;
+}
+.btn-primary:hover {
+  background-color: #08d9d6;
+  border: 1px solid #08d9d6;
+}
